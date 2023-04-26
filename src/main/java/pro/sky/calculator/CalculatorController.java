@@ -21,7 +21,7 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String plus(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
+    public String plus(Integer num1, Integer num2) {
         if (num1 == null || num2 == null) {
             return "Необходимо передать int-параметры num1 и num2, например \"?num1=5&num2=6\"";
         }
@@ -29,7 +29,7 @@ public class CalculatorController {
     }
 
     @GetMapping("/minus")
-    public String minus(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
+    public String minus(Integer num1, Integer num2) {
         if (num1 == null || num2 == null) {
             return "Необходимо передать int-параметры num1 и num2, например \"?num1=5&num2=6\"";
         }
